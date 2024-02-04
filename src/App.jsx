@@ -1,27 +1,28 @@
 import './App.css';
+import Appbar from './Appbar';
+import Intro from './Components/Intro';
+import Profile from "./Components/Profile"
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 function App() {
+  const bStyle = {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    background: "#FFFBF5",
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+    <div style={bStyle} >
+      <Appbar />
+
+      <Router>
+        <Routes>
+          <Route path="/intro" element={Intro} />
+          <Route path="/links" element={<Profile />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

@@ -1,31 +1,38 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: #EEEDEB;
+  /* height: 100%; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: .8rem;
+  background: rgba(128, 128, 128, 0.3);
 }
 
-.App-link {
-  color: #61dafb;
+.btns {
+  display: flex;
+  gap: 1rem;
 }
 
-.heart {
-  color: #ff0000;
+.btns button {
+  padding: 4px;
+  border: none;
+  border-radius: 3px;
+  background: rgba(0, 128, 0, 0.611);
+  color: #EEEDEB;
 }
 
-.small {
-  font-size: 0.75rem;
+.btns button:hover {
+  background: rgba(0, 128, 0, 0.49);
+  cursor: pointer;
 }
